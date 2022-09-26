@@ -3,8 +3,58 @@
 @import 'reset';
 @import 'global';
 
-body{
-  margin: 0;
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
 }
 
+.menu {
+  &__list {
+    display: flex;
+    gap: 35px;
+  }
+
+  &__list-link {
+    text-transform: uppercase;
+    color: $title-color;
+    padding: 0 2px 2px;
+    transition: all .3s linear;
+    @extend %roboto-400;
+    &:hover {
+      color: $accent-color;
+      border-bottom: 1px solid $accent-color;
+    }
+  }
+
+  &__list-link--active {
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.user-nav{
+  display: flex;
+  gap: 25px;
+  &__link{
+    position: relative;
+  }
+  &__num{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    top: -9px;
+    right: -13px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 21px;
+    color: #fff;
+  }
+
+}
 @import 'media';
