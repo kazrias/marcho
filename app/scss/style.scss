@@ -3,8 +3,183 @@
 @import 'reset';
 @import 'global';
 
-body{
-  margin: 0;
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    gap: 35px;
+  }
+
+  &__list-link {
+
+    text-transform: uppercase;
+    color: $title-color;
+    padding: 0 2px 2px;
+    transition: all .3s linear;
+    @extend %roboto-400;
+
+    &:hover {
+      color: $accent-color;
+      border-bottom: 1px solid $accent-color;
+    }
+
+
+  }
+
+  &__list-link--active {
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color;
+    @extend %roboto-700;
+  }
+}
+
+.user-nav {
+  display: flex;
+  gap: 25px;
+
+  &__link {
+    position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    top: -9px;
+    right: -13px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 21px;
+    color: #fff;
+  }
+}
+
+.footer {
+  background-color: $bg-color;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-top {
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+
+  &__contact {
+    width: 250px;
+    margin-right: 50px;
+  }
+
+  &__nav {
+    width: 170px;
+    margin-right: 30px;
+  }
+
+  &__item-form {
+    max-width: 460px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 33px;
+  }
+
+  &__address,
+  &__email,
+  &__phone {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__social {
+    @at-root {
+      ul#{&} {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__social-link {
+    path {
+      fill: $default-color;
+      transition: fill .3s linear;
+    }
+
+    &:hover {
+      path {
+        fill: $accent-color;
+      }
+    }
+  }
+
+  &__title {
+    @extend %roboto-400;
+    color: $title-color;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__form-input {
+    max-width: 320px;
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    padding: 15px 12px;
+
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+
+    &::placeholder {
+      color: $default-color;
+    }
+  }
+
+  &__form-btn {
+    background-color: $accent-color;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px 18px;
+    color: #fff;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    &:hover{
+      filter: brightness(1.2)
+    }
+  }
+}
+.footer-bottom{
+  height: 75px;
+  display: flex;justify-content: space-between;
+  align-items: center;
+  font-size: 12px; 
+  &__accept{
+    display: flex;
+    gap: 25px;
+  }
 }
 
 @import 'media';
