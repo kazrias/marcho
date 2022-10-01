@@ -20,5 +20,8 @@
     "jquery": "^3.6.1",
     "sass": "^1.55.0",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "slick": "^1.12.2"
   }
 }
