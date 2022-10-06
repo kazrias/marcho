@@ -3,7 +3,7 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-
+@import 'keyframes';
 .header {
   &__inner {
     display: flex;
@@ -328,22 +328,7 @@
   &__path.animated:nth-child(4){
     animation: triangle 1s linear 2 alternate;
   }
-  @keyframes expand{
-    50%{
-      transform: scale(1.12);
-    }
-    100%{
-      transform: scale(1);
-    }
-  }
-  @keyframes triangle{
-    50%{
-      transform: scale(1.5);
-    }
-    100%{
-      transform: scale(1);
-    }
-  }
+  
   &__content{
     flex: 1;
   }
