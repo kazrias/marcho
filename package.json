@@ -23,6 +23,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "rateyo": "^2.3.5",
     "slick": "^1.12.2"
   }
 }

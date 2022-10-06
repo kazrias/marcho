@@ -15,4 +15,11 @@ $(function () {
   $(".video-fashion__svg").hover(function(){
     $(".video-fashion__path").addClass("animated");        
   })
+
+  $(".star").rateYo({
+    starWidth: "17px",
+    ratedFill: "#ffc35b",
+    normalFill: "#ccccce",
+    readOnly:true
+  });
 });
