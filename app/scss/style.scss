@@ -849,5 +849,39 @@
     margin-top: 25px;
   }
 }
+.error404{
+  padding: 110px 0 120px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content{
+    max-width: 570px;
+    width: 100%;
+  }
+  &__title{
+    color: #28384f;
+    margin-bottom: 20px;
+    @extend %roboto-700;
+    font-size: 48px;
+    text-align: left;
+  }
+  &__text{
+    margin-bottom: 50px;
+    max-width: 470px;
+  }
+  &__link{
+    @extend %btn;
+    background-color: $accent-color;
+    color: #fff;
+    text-transform: uppercase;
+    @extend %roboto-400;
+    padding: 14px 35px;
+  }
+  &__img{
+    margin-right: -30px;
+  }
+}
 
 @import 'media';
