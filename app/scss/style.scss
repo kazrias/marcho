@@ -811,7 +811,7 @@
     margin-bottom: 4px;
   }
   &__label--remember{
-    margin-top: 50px;
+    margin-top: 45px;
     margin-bottom: 18px;
   }
   &__input{
@@ -844,6 +844,9 @@
   }
   &__reminder{
     color: $accent-color;
+  }
+  &__text{
+    margin-top: 25px;
   }
 }
 
