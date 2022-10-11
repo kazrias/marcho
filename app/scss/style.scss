@@ -506,14 +506,15 @@
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  &__clock{
+
+  &__clock {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 55px;
   }
 
-  &__clock-item{
+  &__clock-item {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -523,13 +524,15 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
-    span{
+
+    span {
       font-size: 48px;
       line-height: 1;
       @extend %roboto-700;
       color: $title-color;
     }
   }
+
   &__link {
     padding: 12px 26px;
     @extend %roboto-400;
@@ -543,14 +546,17 @@
     border: 1px solid $accent-color;
     margin-top: 55px;
     transition: all .3s;
-    &:hover{
+
+    &:hover {
       box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
     }
   }
 }
-.partners{
+
+.partners {
   padding-top: 70px;
-  &__list{
+
+  &__list {
     height: 180px;
     display: flex;
     justify-content: space-between;
@@ -561,21 +567,23 @@
 
 
 
-.blog{
+.blog {
   padding: 45px 0 80px;
   max-width: 1620px;
   margin: 0 auto 80px;
   background: url('../images/decor/blog-right.svg') bottom right no-repeat;
-  
-  &__inner{
+
+  &__inner {
     background: url('../images/decor/blog-left.svg') center left no-repeat;
   }
-  &__items{
+
+  &__items {
     display: flex;
     gap: 30px;
     position: relative;
-    &::after{
-      content:'';
+
+    &::after {
+      content: '';
       position: absolute;
       right: -20px;
       top: -25px;
@@ -585,7 +593,8 @@
       z-index: -2;
     }
   }
-  &__item{
+
+  &__item {
     max-width: 370px;
     padding-bottom: 30px;
     width: 100%;
@@ -594,31 +603,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    &:hover{
-      box-shadow:inset 0 0 0 0px #ececec, 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+
+    &:hover {
+      box-shadow: inset 0 0 0 0px #ececec, 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
     }
   }
-  &__img-link{
+
+  &__img-link {
     display: block;
     width: 100%;
-    height: 288px;margin-bottom: 30px;
+    height: 288px;
+    margin-bottom: 30px;
   }
-  &__img{
-    width:100%; height:100%;
+
+  &__img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     position: relative;
     z-index: -1;
   }
-  &__info{
+
+  &__info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
   }
+
   &__author,
-  &__date{
+  &__date {
     padding-left: 30px;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       width: 20px;
@@ -627,36 +644,153 @@
       top: 4px;
     }
   }
-  &__author::before{
+
+  &__author::before {
     background-image: url('../images/icons/user-grey.svg');
   }
-  &__date::before{
+
+  &__date::before {
     background-image: url('../images/icons/time.svg');
   }
-  &__item-title{
+
+  &__item-title {
     @extend %roboto-400;
     font-size: 22px;
     color: $title-color;
     max-width: 295px;
     margin-bottom: 20px;
   }
-  &__link{
+
+  &__link {
     transition: all .3s;
-    path{
+
+    path {
       transition: all .3s;
     }
-    &:hover{
+
+    &:hover {
       color: $accent-color;
     }
-    &:hover path{
+
+    &:hover path {
       fill: $accent-color;
     }
   }
 }
 
+.map {
+  padding: 120px 0;
+}
 
+#map {
+  width: 100%;
+  height: 450px;
+}
 
+.contact {
+  padding-bottom: 120px;
 
+  &__inner {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__info {
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__info-title {
+    @extend %roboto-700;
+    font-size: 48px;
+    line-height: 56px;
+    color: $title-color;
+    margin-bottom: 15px;
+    text-decoration: underline;
+  }
+
+  &__info-text {
+    margin-bottom: 60px;
+  }
+
+  &__info-item {
+    margin-top: 55px;
+    color: $title-color;
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -3px;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__info-item:first-child::before {
+    background: url('../images/icons/phone.svg') center center no-repeat;
+  }
+
+  &__info-item:nth-child(2)::before {
+    background: url('../images/icons/address.svg') center center no-repeat;
+  }
+
+  &__info-item:last-child::before {
+    background: url('../images/icons/mail.svg') center center no-repeat;
+  }
+
+  &__info-phone {
+    display: block;
+    color: inherit;
+  }
+
+  &__form {
+    padding: 60px 40px;
+    box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
+    width: 100%;
+  }
+  &__form-title{
+    font-size: 22px;
+    @extend %roboto-700;
+    color: $title-color;
+    margin-bottom: 18px;
+  }
+  &__form-input{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: $bg-color;
+    border: none;
+    padding: 0 24px;
+    margin-bottom: 30px;
+  }
+  &__form-textarea{
+    width: 100%;
+    display: block;
+    resize: none;
+    height: 200px;
+    background-color: $bg-color;
+    padding: 24px;
+    border: none;
+    margin-bottom: 30px;
+  }
+  &__form-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  &__form-btn{
+    @extend %btn;
+    border: none;
+  }
+}
 
 
 
@@ -776,8 +910,9 @@
     gap: 25px;
   }
 }
-.top{
-  &__container{
+
+.top {
+  &__container {
     max-width: 1700px;
     margin: 0 auto;
     background: top center/cover no-repeat;
@@ -786,44 +921,51 @@
   }
 }
 
-.modal{
+.modal {
   padding-top: 100px;
   max-width: 570px;
   margin: 0 auto 115px;
-  &__links{
+
+  &__links {
     display: flex;
     gap: 60px;
     justify-content: center;
     margin-bottom: 40px;
   }
-  &__link{
+
+  &__link {
     font-size: 22px;
     @extend %roboto-400;
     color: #909090;
     text-transform: uppercase;
   }
-  &__link--active{
+
+  &__link--active {
     color: $accent-color;
   }
-  &__label{
+
+  &__label {
     display: block;
-    margin-top : 30px;
+    margin-top: 30px;
     margin-bottom: 4px;
   }
-  &__label--remember{
+
+  &__label--remember {
     margin-top: 45px;
     margin-bottom: 18px;
   }
-  &__input{
+
+  &__input {
     display: block;
     margin-top: 3px;
     width: 100%;
     border: none;
-    background-color:$bg-color;
+    background-color: $bg-color;
     height: 60px;
     padding: 0 15px;
   }
-  &__btn{
+
+  &__btn {
     width: 100%;
     display: block;
     background-color: $title-color;
@@ -836,42 +978,50 @@
     cursor: pointer;
     margin-bottom: 15px;
     transition: all .5s ease-in-out;
-    
-    &:hover{
-      box-shadow: inset 0 0 20px 0px $accent-color,inset 0 0 9px 1px $accent-color,
-      inset 15px 0 55px 1px $accent-color,inset -15px 0 55px 1px $accent-color;
+
+    &:hover {
+      box-shadow: inset 0 0 20px 0px $accent-color, inset 0 0 9px 1px $accent-color,
+        inset 15px 0 55px 1px $accent-color, inset -15px 0 55px 1px $accent-color;
     }
   }
-  &__reminder{
+
+  &__reminder {
     color: $accent-color;
   }
-  &__text{
+
+  &__text {
     margin-top: 25px;
   }
 }
-.error404{
+
+.error404 {
   padding: 110px 0 120px;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__content{
+
+  &__content {
     max-width: 570px;
     width: 100%;
   }
-  &__title{
+
+  &__title {
     color: #28384f;
     margin-bottom: 20px;
     @extend %roboto-700;
     font-size: 48px;
     text-align: left;
   }
-  &__text{
+
+  &__text {
     margin-bottom: 50px;
     max-width: 470px;
   }
-  &__link{
+
+  &__link {
     @extend %btn;
     background-color: $accent-color;
     color: #fff;
@@ -879,7 +1029,8 @@
     @extend %roboto-400;
     padding: 14px 35px;
   }
-  &__img{
+
+  &__img {
     margin-right: -30px;
   }
 }

@@ -31,6 +31,7 @@ $bg-color:#f6f6f6;
   padding: 12px 26px;
   text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
   background-color:$accent-color;
   box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
   @extend %roboto-400;
