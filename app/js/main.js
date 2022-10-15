@@ -72,9 +72,11 @@ $(function () {
   })
   $('.button-list').on('click', function(){
     $('.product-item').addClass('product-item--list');
+    $('.shop-content__inner').removeClass('shop-content__inner--border');
   })
   $('.button-grid').on('click', function(){
     $('.product-item').removeClass('product-item--list');
+    $('.shop-content__inner').addClass('shop-content__inner--border');
   })
   jQuery.event.special.touchstart = {
     setup: function (_, ns, handle) {

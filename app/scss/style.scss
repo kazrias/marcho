@@ -402,11 +402,10 @@
     min-width: 100%;
     display: flex;
     height: 250px;
-
+    border: 1px solid #ececec;
     align-items: center;
     gap: 40px;
     text-align: left;
-
     .product-item__text,
     .product-item__btn {
       display: block;
@@ -1184,6 +1183,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 40px;
+    padding-bottom: 35px;
+    &.shop-content__inner--border{
+      border-bottom: 1px solid #ececec;
+    }
   }
 
   &__filter {
