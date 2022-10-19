@@ -2,8 +2,8 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #fe3e57;
-        fill-rule: evenodd;  
+        fill: #fff;
+        fill-rule: evenodd;
       }
     </style>
   </defs>
