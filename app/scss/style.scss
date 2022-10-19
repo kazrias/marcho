@@ -1613,10 +1613,10 @@
     display: flex;
     margin-bottom: 10px;
     align-items: center;
+    gap: 13px;
   }
 
   &__content-name {
-    margin-right: 13px;
     color: $title-color;
     @extend %roboto-400;
   }
@@ -1662,6 +1662,7 @@
   &__title {
     color: $title-color;
     @extend %roboto-400;
+    font-size: 22px;
     padding-bottom: 8px;
     margin-bottom: 25px;
     position: relative;
@@ -1820,14 +1821,15 @@
   &__slider {
     position: relative;
   }
-  &__item--slider{
-    .blog-page__item-box{
+
+  &__item--slider {
+    .blog-page__item-box {
       padding-top: 33px;
     }
   }
 
   .slick-arrow {
-    background-color:#fff;
+    background-color: #fff;
     border: none;
     font-size: 0;
     width: 40px;
@@ -1842,6 +1844,7 @@
     border-radius: 50%;
     cursor: pointer;
     transition: all .3s;
+
     &:hover {
       background-image: url('../images/icons/angle-white.svg');
       background-color: rgb(254, 62, 87);
@@ -1860,7 +1863,7 @@
   }
 }
 
-.person{
+.person {
   padding: 39px 25px 35px;
   border: 1px solid #ececec;
   display: flex;
@@ -1868,69 +1871,84 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  &__img{
+
+  &__img {
     width: 160px;
     height: 160px;
     object-fit: cover;
     margin-bottom: 35px;
   }
-  &__name{
+
+  &__name {
     @extend %roboto-700;
     font-size: 18px;
     color: $title-color;
   }
-  &__position{
+
+  &__position {
     color: $accent-color;
     margin-bottom: 15px;
   }
-  &__text{
+
+  &__text {
     margin-bottom: 24px;
   }
 }
-.latest-post{
+
+.latest-post {
   padding: 35px 30px 20px;
   border: 1px solid #ececec;
   margin-bottom: 40px;
-  &__title{
+
+  &__title {
     color: $title-color;
     text-transform: uppercase;
     @extend %roboto-400;
     font-size: 22px;
     margin-bottom: 15px;
   }
-  &__img{
+
+  &__img {
     width: 80px;
     height: 80px;
     object-fit: cover;
   }
-  &__item{
+
+  &__item {
     padding: 20px 0;
     border-bottom: 1px solid #ececec;
     transition: all .2s;
-    &:hover{
+
+    &:hover {
       box-shadow: 0px -3px 3px $accent-color;
       border-color: $accent-color;
     }
-    &:last-child{
+
+    &:last-child {
       border: none;
-      &:hover{
+
+      &:hover {
         border-bottom: 1px solid $accent-color;
       }
     }
   }
-  &__item-link{
+
+  &__item-link {
     gap: 20px;
     display: flex;
   }
-  &__item-title{
+
+  &__item-title {
     font-size: 18px;
     @extend %roboto-400;
   }
-  &__item-date{
+
+  &__item-date {
     padding-left: 25px;
     position: relative;
-    &::before{
-      content:'';
+
+    &::before {
+      content: '';
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -1942,6 +1960,155 @@
     }
   }
 }
+
+.blog-one {
+  &__img {
+    border: 1px solid #ececec;
+    border-bottom: none;
+  }
+
+  &__text {
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 30px;
+    padding-right: 25px;
+
+    h4 {
+      color: $title-color;
+      font-size: 22px;
+      @extend %roboto-500;
+      margin: 25px 0;
+    }
+
+    p {
+      margin: 25px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    blockquote {
+      background-color: $bg-color;
+      border-left: 3px solid $accent-color;
+      color: $title-color;
+      font-size: 22px;
+      @extend %roboto-400;
+      margin: 25px 0;
+      padding: 35px;
+    }
+
+    .blog-one__left-img {
+      float: left;
+      margin-right: 30px;
+    }
+
+    .blog-one__right-img {
+      float: right;
+      margin-right: 30px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__info-item {
+    padding-left: 25px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+
+  &__info-item--date::before {
+    background-image: url('../images/icons/calendar.svg');
+  }
+
+  &__info-item--comment::before {
+    background-image: url('../images/icons/comment.svg');
+  }
+
+  &__info-item--author::before {
+    width: 20px;
+    background-image: url('../images/icons/user-accent.svg');
+  }
+
+  &__form-title {
+    font-size: 24px;
+    @extend %roboto-700;
+    margin-bottom: 25px;
+    color: $title-color;
+  }
+
+  &__comment-box {
+    gap: 13px;
+    
+  }
+
+  .comments-form {
+    border-bottom: none;
+  }
+
+  
+
+  &__box {
+    display: flex;
+    margin: 25px 0 35px;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  &__share {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  &__tags {
+    
+    span{
+      margin-right: 5px;
+      text-transform: uppercase;
+      color: $title-color;
+    }
+  }
+  &__share-link {
+    display: block;
+    margin-top: 4px;
+    path{
+      fill: #8d8d8d;
+      transition: all .2s;
+    }
+    &:hover{
+      path{
+        fill: $accent-color;
+      }
+    }
+  }
+  &__author{
+    display: flex;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 35px;
+  }
+}
+.comments-title{
+  text-transform: uppercase;
+  font-size: 24px;
+  @extend %roboto-700;
+}
+
 .footer {
   background-color: $bg-color;
   margin-top: auto;
