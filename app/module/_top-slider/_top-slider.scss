@@ -1,0 +1,86 @@
+.top-slider {
+  background-color: $bg-color;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  &__container {
+    max-width: 1400px;
+    background: url('../images/decor/top-slider-bg.png') 0% 0%/contain no-repeat;
+  }
+
+  &__content {
+    padding-left: 95px;
+    padding-top: 125px;
+
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 670px;
+    font-size: 58px;
+    line-height: 68px;
+    @extend %roboto-700;
+    color: $title-color;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+
+  &__link {
+    @extend %btn;
+    padding: 14px 36px;
+
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: -70px;
+
+    li {
+      button {
+        padding: 0;
+        font-size: 0;
+        background: transparent;
+        width: 26px;
+        height: 26px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        transition: all .8s;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $default-color;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all .8s;
+        }
+      }
+
+      &.slick-active {
+        button {
+          border: 1px solid $accent-color;
+
+          &::before {
+            background-color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}

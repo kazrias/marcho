@@ -1,0 +1,10 @@
+.partners {
+  padding-top: 70px;
+
+  &__list {
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
