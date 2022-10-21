@@ -122,3 +122,23 @@ a{
 .header--error404{
   background-color: $bg-color;
 }
+
+@media (max-width:620px){
+  .title{
+    font-size:38px; 
+    line-height: 48px;
+  }
+}
+
+@media (max-width:375px){
+  .title{
+    font-size:32px; 
+    line-height: 36px;
+  }
+}
+@media (max-width:325px){
+  .title{
+    font-size:30px; 
+    line-height: 36px;
+  }
+}
