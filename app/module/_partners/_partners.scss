@@ -8,3 +8,21 @@
     align-items: center;
   }
 }
+
+@media(max-width: 1200px) {
+  .partners {
+    &__list {
+      height: auto;
+    }
+  }
+}
+
+@media(max-width: 620px) {
+  .partners {
+    &__list{
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+}
