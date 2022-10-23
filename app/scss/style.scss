@@ -219,12 +219,23 @@
 
 .shop {
   padding: 120px 0 105px;
-
   &__inner {
     display: flex;
     gap: 30px;
+    position: relative;
   }
-
+  &__inner-showbtn{
+    display: none;
+    margin-left: 10px;
+    z-index: 16;
+    @extend %btn;
+    box-shadow: none;
+    padding: 0px 8px;
+    font-size: 12px;
+    border: 1px solid $accent-color;
+    background-color: #ffffff70;
+    color: $accent-color;
+  }
   &__filters {
     width: 370px;
   }
@@ -503,6 +514,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 40px;
+    column-gap: 15px;
     padding-bottom: 35px;
 
     &.shop-content__inner--border {
@@ -1115,6 +1127,7 @@
 
   &__img {
     height: 450px;
+    width: 100%;
     object-fit: cover;
   }
 
@@ -1284,7 +1297,11 @@
     border: 1px solid #ececec;
     border-bottom: none;
   }
-
+  &__author-img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
   &__text {
     border: 1px solid #ececec;
     border-top: none;
@@ -1426,7 +1443,6 @@
   font-size: 24px;
   @extend %roboto-700;
 }
-
 
 .error404 {
   padding: 110px 0 120px;
