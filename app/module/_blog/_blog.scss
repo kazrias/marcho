@@ -1,0 +1,163 @@
+.blog {
+  padding: 45px 0 80px;
+  max-width: 1620px;
+  margin: 0 auto 80px;
+  background: url('../images/decor/blog-right.svg') bottom right no-repeat;
+
+  &__wrapper {
+    padding: 0 10px;
+  }
+
+  &__inner {
+    background: url('../images/decor/blog-left.svg') center left no-repeat;
+  }
+
+  &__items {
+    display: flex;
+    gap: 30px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: -25px;
+      background-image: url('../images/decor/blog-decor.svg');
+      width: 126px;
+      height: 53px;
+      z-index: -2;
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    padding-bottom: 30px;
+    width: 100%;
+    box-shadow: inset 0 0 0 1px #ececec;
+    transition: all .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      box-shadow: inset 0 0 0 0px #ececec, 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    }
+  }
+
+  &__img-link {
+    display: block;
+    width: 100%;
+    height: 288px;
+    margin-bottom: 30px;
+    object-fit: cover;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__author,
+  &__date {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &__author::before {
+    background-image: url('../images/icons/user-grey.svg');
+  }
+
+  &__date::before {
+    background-image: url('../images/icons/time.svg');
+  }
+
+  &__item-title {
+    @extend %roboto-400;
+    font-size: 22px;
+    color: $title-color;
+    max-width: 295px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    transition: all .3s;
+
+    path {
+      transition: all .3s;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:hover path {
+      fill: $accent-color;
+    }
+  }
+}
+
+@media(max-width:1235px) {
+  .blog {
+    &__items {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media(max-width:1235px) {
+  .blog {
+    &__info {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &__img-link {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media(max-width:850px) {
+  .blog {
+    &__items{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    &__item{
+      max-width: 100%;
+    }
+    &__item-title{
+      margin-bottom: 10px;
+    }
+  }
+}
+@media(max-width:625px) {
+  .blog {
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+    &__item{
+      align-items: flex-start;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@keyframes expand{
+  50%{
+    transform: scale(1.12);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes triangle{
+  50%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}

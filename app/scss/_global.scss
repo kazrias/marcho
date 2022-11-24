@@ -3,6 +3,9 @@ body{
   font-size: 16px;
   line-height: 26px;
   @extend %quicksand-500;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .container{
@@ -10,9 +13,132 @@ body{
   margin: 0 auto;
   padding: 0 15px;
 }
+
 a{
   color: $default-color;
   font-size: 16px;
   line-height: 26px;
   @extend %quicksand-500;
+}
+.title{
+  text-align: center;
+  text-transform: uppercase;
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 65px;
+  color: $title-color;
+  margin-bottom: 10px;
+}
+.text{
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto 55px;
+}
+.breadcrumbs{
+  padding-left: 25px;
+  position: relative;
+  display: inline-flex;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 4px;
+    background-image: url('../images/icons/home.svg');
+  }
+  &__list{
+    display: inline-flex;
+    justify-content: center;
+  }
+  &__item{
+    padding-right: 30px;
+    position: relative;
+    color: #727272;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 9px;
+      right: 15px;
+      width: 9px;
+      height: 10px;
+      background-image: url('../images/icons/angle-right.svg');
+    }
+    &:last-child{
+      color: $accent-color;
+      padding-right: 0;
+      &::after{
+        content: none;
+      }
+    }
+  }
+
+  &__link{
+    color: inherit;
+  }
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  &__list{
+    display: flex;
+    gap: 30px;
+    margin: 0 45px;
+  }
+  &__link{
+    cursor: pointer;
+    &.pagination__link--active{
+      color: $accent-color;
+    }
+  }
+  &__arrow{
+    text-transform: uppercase;
+    position: relative;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 10px;
+      height: 5px;
+      top: 11px;
+      background-image: url('../images/icons/angle.svg');
+    }
+  }
+  &__prev{   
+    padding-left: 15px;
+    &::before{
+      left: 0;
+      transform: rotate(90deg);
+    }
+  }
+  &__next{
+    padding-right: 15px;
+    &::before{
+      right: 0;
+      transform: rotate(-90deg);
+    }
+  }
+}
+.header--error404{
+  background-color: $bg-color;
+}
+
+@media (max-width:620px){
+  .title{
+    font-size:38px; 
+    line-height: 48px;
+  }
+}
+
+@media (max-width:375px){
+  .title{
+    font-size:32px; 
+    line-height: 36px;
+  }
+}
+@media (max-width:325px){
+  .title{
+    font-size:30px; 
+    line-height: 36px;
+  }
 }

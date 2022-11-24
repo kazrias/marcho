@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/page-404.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  {% include 'app/module/_header/_header.html' %}
+  <main class="main">
+    <section class="error404">
+      <div class="container">
+        <div class="error404__inner">
+          <div class="error404__content">
+            <h2 class="title error404__title">OOPS! Page Not Found!!</h2>
+            <p class="error404__text">We're sorry but we can't find the pages you request. This might be because you have typed the web address incorrectly.</p>
+            <a class="error404__link" href="#">back to home</a>
+          </div>
+          <img class="error404__img" src="images/404.png" alt="error 404">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  {% include 'app/module/_footer/_footer.html' %}
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

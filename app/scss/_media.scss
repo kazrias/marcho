@@ -1,0 +1,437 @@
+@media (max-width:1230px) {
+  .error404 {
+    &__title {
+      text-align: left;
+    }
+
+    &__img {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width:1200px) {
+
+  .person,
+  .latest-post {
+    display: none;
+  }
+
+  .blog-page {
+    padding: 60px 0;
+
+    .filter-category,
+    .filter-tags {
+      display: none;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__aside {
+      order: -1;
+      max-width: 100%;
+    }
+
+    .filter-search {
+      &__input {
+        width: 100%;
+      }
+    }
+  }
+
+  .blog-one {
+    &__text {
+      padding-bottom: 140px;
+    }
+  }
+
+  .shop {
+    &__filters {
+      width: 265px;
+    }
+
+    .filter__item {
+      padding: 20px 10px 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .product-slide {
+    &__thumb {
+      display: none;
+    }
+  }
+
+  .product-one {
+    &__slide {
+      width: auto;
+    }
+
+    &__inner {
+      gap: 25px;
+    }
+  }
+}
+
+@media (max-width:1100px) {
+  .shop-content {
+    &__inner {
+      justify-content: center;
+    }
+  }
+
+  .product-one {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__box {
+      justify-content: flex-start;
+      gap: 20px;
+    }
+  }
+
+  .product-slide {
+    &__big {
+      width: 100%;
+
+      img {
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width:1000px) {
+  .error404 {
+    &__img {
+      width: 50%;
+    }
+  }
+
+  .blog-one {
+    &__text {
+      padding-bottom: 80px;
+    }
+  }
+
+  .contact {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__info {
+      max-width: 100%;
+    }
+
+    &__info-text {
+      margin-bottom: 25px;
+    }
+
+    &__info-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__info-item {
+      margin: 0;
+    }
+  }
+
+  .map {
+    padding: 60px 0;
+  }
+
+  .shop-content {
+    &__inner {
+      justify-content: center;
+    }
+  }
+  .related__items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width:870px) {
+  .shop {
+    &__filters {
+      transform: translateX(-200%);
+      position: absolute;
+      z-index: 15;
+      top: 186px;
+      transition: all .3s;
+
+      &.shop__filters--active {
+        transform: translateX(0%);
+      }
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__inner-showbtn {
+      display: block;
+    }
+
+    .filter__item {
+      background-color: rgb(255 255 255 / 95%);
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width:800px) {
+  .error404 {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+
+  .blog-one {
+    &__text {
+      padding-bottom: 30px;
+    }
+  }
+
+  .product-item {
+    &.product-item--list {
+      gap: 15px;
+    }
+  }
+  .comments-form{
+    &__rating{
+      display: none;
+    }
+  }
+  .related__items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .blog-one {
+    &__info {
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    &__text {
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 30px;
+    }
+
+    &__box {
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+    }
+  }
+
+  .contact {
+    &__form {
+      padding: 25px 10px;
+    }
+
+    &__form-box {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__info-title {
+      font-size: 36px;
+    }
+
+    &__info-item {
+      padding-left: 70px;
+    }
+  }
+
+  .shop-content {
+    &__filter-buttons {
+      display: none;
+    }
+
+    &__filter {
+      padding-left: 0;
+    }
+  }
+
+  .product-slide {
+    &__big img {
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width:550px) {
+  .blog-page {
+    &__img {
+      height: 300px;
+    }
+
+    &__item-box {
+      padding: 10px;
+      padding-top: 20px;
+    }
+
+    &__item-title {
+      font-size: 20px;
+    }
+
+    &__slider {
+      .slick-arrow {
+        top: 80%;
+      }
+
+      .slick-next {
+        right: 10px;
+      }
+
+      .slick-prev {
+        left: 10px;
+      }
+    }
+  }
+
+  .blog-one {
+    &__text {
+      .blog-one__left-img {
+        float: none;
+        height: 270px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      blockquote {
+        padding: 15px;
+      }
+    }
+
+  }
+
+  .comments-form {
+    &__input-box {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  .related__items{
+    .product-item__img-box{
+      height: auto;
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .blog-one {
+    &__info {
+      justify-content: flex-start;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    &__author-img {
+      display: none;
+    }
+
+    &__box {
+      gap: 10px;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+  }
+
+  .shop-content {
+    &__filter {
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .pagination {
+    &__arrow {
+      display: none;
+    }
+  }
+  .product-tabs{
+    &__top{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border: none;
+    }
+    &__top-item + .product-tabs__top-item{
+      margin: 0;
+    }
+  } 
+}
+
+@media (max-width:400px) {
+  .error404 {
+    &__title {
+      font-size: 46px;
+    }
+  }
+
+  .comments {
+    &__img {
+      display: none;
+    }
+  }
+
+  .shop-content {
+    &__filter {
+      gap: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  .shop {
+    &__inner-showbtn {
+      margin-top: 10px;
+    }
+  }
+
+  .product-filter {
+    &__size {
+      label {
+        margin-right: -1px;
+      }
+    }
+  }
+
+  .product-one {
+    &__btn {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  .related__items{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
